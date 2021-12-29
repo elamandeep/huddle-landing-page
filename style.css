@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --violet:hsl(257, 40%, 49%);
+    --magenta:hsl(300, 69%, 71%);
+}
+
+/*font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif; */
+*{    
+    box-sizing: border-box;
+}
+body{
+    height:90vh;
+    background-color: var(--violet);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 90vw;
+    grid-template-rows: 20vh auto 10vh;
+}
+#logo{
+    margin: auto 40px;
+}
+
+#main-container{
+    display: flex;
+    margin: auto 40px;
+    align-items: flex-start;
+}
+#main-container img{
+    width: 100%;
+    height: auto;
+}
+#main-hero{
+    padding:0px 40px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 700;  
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+}
+.btn{
+    padding: 10px 40px;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    border: 0px;
+    background-color: white;
+    filter: drop-shadow(2px 4px 4px rgb(39, 38, 38));
+}
+.btn:hover{
+    background-color: var(--magenta);
+    color: white;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: flex-start;
+} 
+a{
+    display: block;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display:inline-flex ;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--magenta);
+    border: 1px solid var(--magenta);
+}
+
+@media screen and (max-width:1000px) {
+    body{
+        background-color: var(--violet);
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 90vw;
+        grid-template-rows: 20vh auto 10vh;
+    }
+    #main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-container img{
+        width: 100%;
+        height: auto;
+        margin:0px auto;
+    }
+    #main-hero{
+        padding:0px 5px;
+        text-align: center;
+    }
+    h1{
+        font-size: 1.2rem;
+    }  
+    ul{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    a{
+        width: 2rem;
+        height: 2rem;
+    }
+}
